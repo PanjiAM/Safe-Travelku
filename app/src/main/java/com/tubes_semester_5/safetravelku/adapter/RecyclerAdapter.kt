@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.tubes_semester_5.safetravelku.R
@@ -17,11 +18,13 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         var itemNama: TextView
         var itemKategori: TextView
         var itemDetail: TextView
+        var fotoObjek: ImageView
 
         init {
             itemNama = itemView.findViewById(R.id.namaWisata)
             itemKategori = itemView.findViewById(R.id.kategori)
             itemDetail = itemView.findViewById(R.id.detailWisata)
+            fotoObjek = itemView.findViewById(R.id.img_item_photo)
 
             itemView.setOnClickListener {
                 var position: Int = getAdapterPosition()

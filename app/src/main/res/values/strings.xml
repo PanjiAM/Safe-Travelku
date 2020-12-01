@@ -137,6 +137,8 @@ lagi!</item>
 @miftakhulmukhasin-@hengki_pamungkas-740x294.jpg</item>
         <item>https://indonesia.tripcanvas.co/id/wp-content/uploads/sites/2/2019/09/21-2-by-@The-VillagePurwokerto-740x740.jpg</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key">AIzaSyC7Xyv2yogvVBSrbLPZArZZ6muk1kyA7L0</string>
 
 
 </resources>

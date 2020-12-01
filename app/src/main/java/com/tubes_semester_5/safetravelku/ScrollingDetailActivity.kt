@@ -1,5 +1,6 @@
 package com.tubes_semester_5.safetravelku
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -19,11 +20,15 @@ class ScrollingDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_scrolling_detail)
         setSupportActionBar(findViewById(R.id.toolbar))
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            val moveToMaps = Intent(this, MapsActivity::class.java)
+            startActivity(moveToMaps)
         }
         val judul = intent.getStringExtra(EXTRA_NAMA)
         findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout).title = judul.toString()
+
+        val detail = intent.getStringExtra(EXTRA_DETAIL)
+        val tvDetail = findViewById<TextView>(R.id.item_deskripsi_wisata)
+        tvDetail.text = detail
 
     }
 }
