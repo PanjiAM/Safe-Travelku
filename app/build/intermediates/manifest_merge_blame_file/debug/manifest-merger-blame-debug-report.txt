@@ -1,0 +1,123 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tubes_semester_5.safetravelku"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:5:5-79
+11-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:5:22-76
+12
+13    <!-- Include required permissions for Google Maps API to run. -->
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+14-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
+15-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:22-64
+16
+17    <uses-feature
+17-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+18        android:glEsVersion="0x00020000"
+18-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+19        android:required="true" />
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+20
+21    <application
+21-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:7:5-40:19
+22        android:allowBackup="true"
+22-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:8:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.3.2] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\ee64c205f53f42c956b9de532d024878\core-1.3.2\AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@mipmap/ic_launcher"
+25-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:9:9-43
+26        android:label="@string/app_name"
+26-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:10:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:11:9-54
+28        android:supportsRtl="true"
+28-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:12:9-35
+29        android:testOnly="true"
+30        android:theme="@style/Theme.SafeTravelku" >
+30-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:13:9-50
+31        <meta-data
+31-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:15:9-17:55
+32            android:name="com.google.android.geo.API_KEY"
+32-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:16:13-58
+33            android:value="@string/google_maps_key" />
+33-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:17:13-52
+34
+35        <activity
+35-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:19:9-22:20
+36            android:name="com.tubes_semester_5.safetravelku.MapsActivity"
+36-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:20:13-41
+37            android:label="Lokasi Wisata" >
+37-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:21:13-42
+38        </activity>
+39        <activity
+39-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:24:9-26:59
+40            android:name="com.tubes_semester_5.safetravelku.MainActivity"
+40-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:25:13-41
+41            android:label="@string/title_activity_main" />
+41-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:26:13-56
+42        <activity
+42-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:27:9-30:69
+43            android:name="com.tubes_semester_5.safetravelku.ScrollingDetailActivity"
+43-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:28:13-52
+44            android:label="@string/title_activity_scrolling_detail"
+44-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:29:13-68
+45            android:theme="@style/Theme.SafeTravelku.NoActionBar" />
+45-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:30:13-66
+46        <activity android:name="com.tubes_semester_5.safetravelku.DaftarActivity" />
+46-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:31:9-52
+46-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:31:19-49
+47        <activity android:name="com.tubes_semester_5.safetravelku.MasukActivity" />
+47-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:32:9-51
+47-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:32:19-48
+48        <activity android:name="com.tubes_semester_5.safetravelku.HaloActivity" >
+48-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:33:9-39:20
+48-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:33:19-47
+49            <intent-filter>
+49-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:34:13-38:29
+50                <action android:name="android.intent.action.MAIN" />
+50-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:35:17-69
+50-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:35:25-66
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+52-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:37:17-77
+52-->C:\Users\Maleek\Documents\kuliah\ppb\uts\Safe-Travelku\SafeTravelku\app\src\main\AndroidManifest.xml:37:27-74
+53            </intent-filter>
+54        </activity>
+55        <!-- Needs to be explicitly declared on P+ -->
+56        <uses-library
+56-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+57            android:name="org.apache.http.legacy"
+57-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+58            android:required="false" />
+58-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\a17d2f2824084c848f1ade013fece66d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+59
+60        <activity
+60-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\9d4f1333978bc9017bd48f375a3bb862\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+61            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+61-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\9d4f1333978bc9017bd48f375a3bb862\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+62            android:exported="false"
+62-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\9d4f1333978bc9017bd48f375a3bb862\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+63            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+63-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\9d4f1333978bc9017bd48f375a3bb862\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+64
+65        <meta-data
+65-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\b5fb61b5f6d48fc3aecc3a9f403a6524\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+66            android:name="com.google.android.gms.version"
+66-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\b5fb61b5f6d48fc3aecc3a9f403a6524\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+67            android:value="@integer/google_play_services_version" />
+67-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Maleek\.gradle\caches\transforms-2\files-2.1\b5fb61b5f6d48fc3aecc3a9f403a6524\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+68    </application>
+69
+70</manifest>
