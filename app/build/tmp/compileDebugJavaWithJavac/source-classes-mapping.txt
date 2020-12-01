@@ -1,2 +1,0 @@
-com/tubes_semester_5/safetravelku/BuildConfig.java
- com.tubes_semester_5.safetravelku.BuildConfig

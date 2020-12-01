@@ -1,7 +1,0 @@
-#Tue Dec 01 10:55:35 ICT 2020
-base.0=C\:\\Users\\Maleek\\Documents\\kuliah\\ppb\\uts\\Safe-Travelku\\SafeTravelku\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=C\:\\Users\\Maleek\\Documents\\kuliah\\ppb\\uts\\Safe-Travelku\\SafeTravelku\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
