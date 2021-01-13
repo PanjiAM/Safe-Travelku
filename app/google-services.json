@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "906467446074",
+    "project_id": "safetravelku",
+    "storage_bucket": "safetravelku.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906467446074:android:d7ea838362d41570341403",
+        "android_client_info": {
+          "package_name": "com.tubes_semester_5.safetravelku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906467446074-m90jmigde59fa7rf9gcjhv2iadiuvivg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzeaXI2wjQBVXNZffEeHzCfsJ2a1Y-wb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906467446074-m90jmigde59fa7rf9gcjhv2iadiuvivg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
