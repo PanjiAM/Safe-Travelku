@@ -1,32 +1,49 @@
 package com.tubes_semester_5.safetravelku.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import com.tubes_semester_5.safetravelku.MasukActivity
 import com.tubes_semester_5.safetravelku.R
-import com.tubes_semester_5.safetravelku.ui.notifications.SerchViewModel
+import com.tubes_semester_5.safetravelku.databinding.FragmentProfileBinding
+
 
 class ProfileFragment : Fragment() {
+    private lateinit var auth: FirebaseAuth
+    private lateinit var binding: FragmentProfileBinding
 
-    private lateinit var profileViewModel: SerchViewModel
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        profileViewModel =
-            ViewModelProvider(this).get(SerchViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_serch, container, false)
-        val textView: TextView = root.findViewById(R.id.text_serch)
-        profileViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+        binding = FragmentProfileBinding.inflate(inflater, container, false)
+        val view = binding.root
+        auth = FirebaseAuth.getInstance()
+        auth = Firebase.auth
+        updateUI()
+        return view
     }
+
+    private fun updateUI() {
+        val currentUser = auth.currentUser
+        binding.textEmail.setText(currentUser?.email.toString())
+        binding.textNama.setText(currentUser?.displayName.toString())
+        binding.textHp.setText("No telp belum di-set!")
+    }
+
 }

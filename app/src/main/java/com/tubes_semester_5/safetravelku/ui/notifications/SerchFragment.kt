@@ -12,20 +12,16 @@ import com.tubes_semester_5.safetravelku.R
 
 class SerchFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: SerchViewModel
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-            ViewModelProvider(this).get(SerchViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_serch, container, false)
-        val textView: TextView = root.findViewById(R.id.text_serch)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_serch, container, false)
     }
 }
