@@ -28,6 +28,9 @@ class ListMyDataAdapter(private val listMyData: ArrayList<MyData>) :
                         .apply(RequestOptions().override(55, 55))
                         .into(img_item_photo)
                 tv_item_name.text = myData.name
+                tv_item_kategori.text = myData.kategori
+                tv_item_tarif.text = myData.tarif
+                tv_item_jam.text = myData.jam
                 tv_item_description.text = myData.description
             }
         }

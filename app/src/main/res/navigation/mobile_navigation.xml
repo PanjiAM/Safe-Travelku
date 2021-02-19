@@ -9,6 +9,8 @@
         android:id="@+id/navigation_home"
         android:name="com.tubes_semester_5.safetravelku.ui.home.HomeFragment"
         android:label="@string/title_home"
+        android:fontFamily="@font/nunito_font_family"
+        android:textFontWeight="700"
         tools:layout="@layout/fragment_home" />
 
     <fragment

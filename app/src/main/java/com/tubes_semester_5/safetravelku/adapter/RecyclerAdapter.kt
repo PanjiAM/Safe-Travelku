@@ -4,11 +4,14 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.tubes_semester_5.safetravelku.R
 import com.tubes_semester_5.safetravelku.ScrollingDetailActivity
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
@@ -18,12 +21,18 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         var itemNama: TextView
         var itemKategori: TextView
         var itemDetail: TextView
+        var itemRating: TextView
+        var itemJam: TextView
+        var itemTarif: TextView
         var fotoObjek: ImageView
 
         init {
             itemNama = itemView.findViewById(R.id.namaWisata)
             itemKategori = itemView.findViewById(R.id.kategori)
             itemDetail = itemView.findViewById(R.id.detailWisata)
+            itemRating = itemView.findViewById(R.id.ratingWisata)
+            itemJam = itemView.findViewById(R.id.jamWisata)
+            itemTarif = itemView.findViewById(R.id.tarifWisata)
             fotoObjek = itemView.findViewById(R.id.img_item_photo)
 
             itemView.setOnClickListener {
@@ -32,6 +41,10 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                 val intent = Intent(context, ScrollingDetailActivity::class.java).apply {
                     putExtra(ScrollingDetailActivity.EXTRA_NAMA, itemNama.text)
                     putExtra(ScrollingDetailActivity.EXTRA_DETAIL, itemDetail.text)
+                    putExtra(ScrollingDetailActivity.EXTRA_KATEGORI, itemKategori.text)
+                    putExtra(ScrollingDetailActivity.EXTRA_RATING, itemRating.text)
+                    putExtra(ScrollingDetailActivity.EXTRA_JAM, itemJam.text)
+                    putExtra(ScrollingDetailActivity.EXTRA_TARIF, itemTarif.text)
                 }
                 context.startActivity(intent)
             }
@@ -47,12 +60,18 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         viewHolder.itemNama.text = nama[i]
         viewHolder.itemKategori.text = kategori[i]
+        viewHolder.itemRating.text = rating[i]
+        viewHolder.itemJam.text = jam[i]
+        viewHolder.itemTarif.text = tarif[i]
         viewHolder.itemDetail.text = detail[i]
 
     }
-
     override fun getItemCount(): Int {
         return nama.size
+        return kategori.size
+        return rating.size
+        return jam.size
+        return tarif.size
         return detail.size
     }
 
@@ -61,10 +80,10 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         "Bukit Agaran", "Bukit Gadog", "Baturraden",
         "Curug Jenggala")
 
-    private val kategori = arrayOf("Wisata Alam", "Wisata Alam",
+    private val kategori = arrayOf("Wisata Alam", "Wisata Alam, Pegunungan",
+        "Wisata Alam, Air", "Wisata Alam",
         "Wisata Alam", "Wisata Alam",
-        "Wisata Alam", "Wisata Alam",
-        "Wisata Alam", "Wisata Alam")
+        "Wisata Alam, Rekreasi", "Wisata Alam, Air")
 
     private val detail = arrayOf("Yang tertarik menikmati warna-warna cerah bunga matahari dan marigold, kebun bunga ini adalah spot yang tepat dikunjungi. Kamu dipersilakan berburu foto yang Instagenik, tapi jangan sampai merusak kebun bunganya, ya!",
         "Tidak bisa dimungkiri, Bukit Pandang Munggang menjadi destinasi wisata di Banyumas yang harus kamu kunjungi jika ingin melihat keindahan alam dan lanskap yang keren dari kota ini. Tidak hanya itu saja, banyak spot berfoto kece yang bisa jadi pilihan background kamu, terutama saat malam hari!",
@@ -74,5 +93,21 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         "Penikmat selfie, Bukit Gadog bisa menjadi destinasi wisata di Purwokerto yang pas untuk dikunjungi. Meski sedikit menantang untuk didatangi, namun pesona alam yang kamu dapatkan di puncaknya akan membuat siapapun terkesima.",
         "Wisata Baturaden merupakan tempat wisata yang berada di sebelah utara Kota Purwokerto atau tepatnya di lereng gunung slamet. tidak sedikit hotel dan vila indah berdiri di kawasan ini untuk memenuhi kebutuhan tempat tinggal di kawasan baturaden, dengan hawa yang sejuk dan pemandangan yang indah membuat wisatawan betah untuk tinggal di setiap hotel maupun vila yang ada di sini.",
         "Curug Jenggal adalah air terjun setinggi kurang lebih 30 meter yang berada di Banyumas. Air terjun ini merupakan salah satu rangkaian air terjun yang berada di kawasan Gunung Slamet. Sebelumnya, Curug Jenggala memiliki nama Curug Tempuan, mewakili kondisinya yang menjadi pertemuan Sungai Banjaran dan Sungai Mertelu.")
+
+    private val rating = arrayOf("4.3", "4.4",
+        "4.0", "3.9",
+        "3.7",
+        "4.6", "4.7", "4.9")
+
+    private val jam = arrayOf("06.00 - 18.00", "08.00 - 21.00",
+        "24 Jam", "08.00 - 18.00",
+        "08.00 - 17.00", "24 jam",
+        "07.00 - 15.00", "07.00 - 17.00")
+
+    private val tarif = arrayOf("Rp8000,- / Orang", "Rp10000,- / Orang",
+        "Rp3000,- / Orang", "Rp5000,- / Orang",
+        "Rp5000,- / Orang", "Rp5000,- / Orang",
+        "Rp25000,- / Orang", "Rp8000,- / Orang")
+
 }
 
