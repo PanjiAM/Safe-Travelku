@@ -3,6 +3,7 @@ package com.tubes_semester_5.safetravelku
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -18,6 +19,7 @@ class ScrollingDetailActivity : AppCompatActivity() {
         const val EXTRA_RATING = "extra_rating"
         const val EXTRA_JAM = "extra_jam"
         const val EXTRA_TARIF = "extra_tarif"
+        const val EXTRA_IMAGE = "extra_image"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,5 +56,9 @@ class ScrollingDetailActivity : AppCompatActivity() {
         val tarif = intent.getStringExtra(EXTRA_TARIF)
         val tvtarif = findViewById<TextView>(R.id.item_tarif)
         tvtarif.text = tarif
+
+        val img = intent.getIntExtra(EXTRA_IMAGE,1)
+        val imgBanner = findViewById<ImageView>(R.id.iv_detail_photo)
+        imgBanner.setImageResource(img)
     }
 }

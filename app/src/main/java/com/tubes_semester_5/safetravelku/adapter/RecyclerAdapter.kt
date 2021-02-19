@@ -25,6 +25,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         var itemJam: TextView
         var itemTarif: TextView
         var fotoObjek: ImageView
+        var drawableImg : Int ? = null
 
         init {
             itemNama = itemView.findViewById(R.id.namaWisata)
@@ -34,6 +35,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             itemJam = itemView.findViewById(R.id.jamWisata)
             itemTarif = itemView.findViewById(R.id.tarifWisata)
             fotoObjek = itemView.findViewById(R.id.img_item_photo)
+
 
             itemView.setOnClickListener {
                 var position: Int = getAdapterPosition()
@@ -45,6 +47,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     putExtra(ScrollingDetailActivity.EXTRA_RATING, itemRating.text)
                     putExtra(ScrollingDetailActivity.EXTRA_JAM, itemJam.text)
                     putExtra(ScrollingDetailActivity.EXTRA_TARIF, itemTarif.text)
+                    putExtra(ScrollingDetailActivity.EXTRA_IMAGE, drawableImg)
                 }
                 context.startActivity(intent)
             }
@@ -64,6 +67,8 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         viewHolder.itemJam.text = jam[i]
         viewHolder.itemTarif.text = tarif[i]
         viewHolder.itemDetail.text = detail[i]
+        viewHolder.fotoObjek.setImageResource(img[i])
+        viewHolder.drawableImg = img[i]
 
     }
     override fun getItemCount(): Int {
@@ -79,6 +84,17 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         "Bukit Pandang Munggang", "Sendang Bidadari", "Bukit Watu Meja",
         "Bukit Agaran", "Bukit Gadog", "Baturraden",
         "Curug Jenggala")
+
+    private val img = arrayOf(
+            R.drawable.kebun_matahari,
+            R.drawable.bukit_pandang_munggang,
+            R.drawable.sendang_bidadari,
+            R.drawable.bukit_watu_meja,
+            R.drawable.agaran,
+            R.drawable.bukit_gadog,
+            R.drawable.baturaden1,
+            R.drawable.curug_jenggala
+    )
 
     private val kategori = arrayOf("Wisata Alam", "Wisata Alam, Pegunungan",
         "Wisata Alam, Air", "Wisata Alam",
