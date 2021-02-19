@@ -143,6 +143,11 @@ lagi!</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
     <string name="google_maps_key">AIzaSyC7Xyv2yogvVBSrbLPZArZZ6muk1kyA7L0</string>
+    <string name="protokol_wisata">Protokol Pencegahan Covid-19 :\n
+- Wajib Menggunakan Masker Dengan Benar!\n
+- Pengukuran Suhu Tubuh\n
+- Selalu Mencuci Tangan dan Membawa Hand Sanitizer\n
+- Tetap Menjaga Jarak dengan Orang Lain\n</string>
 
 
 </resources>

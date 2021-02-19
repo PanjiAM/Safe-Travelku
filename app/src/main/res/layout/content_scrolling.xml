@@ -106,6 +106,24 @@
             android:padding="5dp"/>
     </LinearLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp"
+            android:paddingTop="32dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/protokol_wisata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/protokol_wisata"
+                android:fontFamily="@font/nunito_font_family"
+                android:textFontWeight="400"
+                android:padding="5dp"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
